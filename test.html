@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.red-border {
+      border: 1px solid red;
+    }
+    
+    .green-border {
+      border: 1px solid green;
+    }
+      </style>
+</head>
+<body>
+    <input type="text" id="myInput">
+    <script>
+     const input = document.getElementById('myInput');
+
+input.addEventListener('blur', function() {
+  this.classList.add('red-border'); // Thêm lớp red-border khi input mất focus
+  this.classList.remove('green-border'); // Loại bỏ lớp green-border
+});
+
+input.addEventListener('focus', function() {
+  this.classList.remove('red-border'); // Loại bỏ lớp red-border khi input được focus lại
+  this.classList.add('green-border'); // Thêm lớp green-border
+});
+    </script>
+</body>
+</html>
